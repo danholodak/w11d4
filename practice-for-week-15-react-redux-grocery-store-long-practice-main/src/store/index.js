@@ -1,8 +1,9 @@
 // define root reducer and a function that will return a redux store
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import produceReducer from './produce';
 
 const rootReducer = combineReducers({
-
+    produce: produceReducer
 });
 
 let enhancer;
