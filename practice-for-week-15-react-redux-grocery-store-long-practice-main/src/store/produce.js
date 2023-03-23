@@ -3,7 +3,6 @@ import produceData from "../mockData/produce.json"
 export default function produceReducer(state={}, action){
     Object.freeze(state)
     const newState = {...state}
-    console.log('reducer');
 
     switch(action.type){
         case POPULATE:
@@ -19,10 +18,9 @@ export default function produceReducer(state={}, action){
 const POPULATE = "procuce/POPULATE"
 
 export function populateProduce(){
-    console.log('action creator');
+
     return {
         type: POPULATE,
         produce: produceData
     }
-
 }
